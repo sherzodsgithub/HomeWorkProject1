@@ -11,7 +11,7 @@ driver.implicitly_wait(20)
 sign_in_link = "//a[contains(text(),'Sign in')]"
 create_email_box = "//input[@id='email_create']"
 create_acct_button = "//body[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]/button[1]/span[1]"
-email = "wwwoww1@email.com"
+email = "wwwoww14@email.com"
 password = "Maradona10"
 mr_button = "//input[@id='id_gender1']"
 first_name = "//input[@id='customer_firstname']"
