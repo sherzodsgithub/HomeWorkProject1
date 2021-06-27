@@ -11,7 +11,7 @@ driver.implicitly_wait(20)
 sign_in_link = "//a[contains(text(),'Sign in')]"
 create_email_box = "//input[@id='email_create']"
 create_acct_button = "//body[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/form[1]/div[1]/div[3]/button[1]/span[1]"
-email = "wwwoww@email.com"
+email = "wwwoww1@email.com"
 password = "Maradona10"
 mr_button = "//input[@id='id_gender1']"
 first_name = "//input[@id='customer_firstname']"
@@ -21,6 +21,8 @@ password_input = "//input[@id='passwd']"
 select_day = "//select[@id='days']"
 select_month = "//select[@id='months']"
 select_year = "//select[@id='years']"
+newsletter_checkbox = "//input[@id='newsletter']"
+receive_checkbox = "//input[@id='optin']"
 address_firstname = "//input[@id='firstname']"
 address_lastname = "//input[@id='lastname']"
 company_name = "//input[@id='company']"
@@ -29,11 +31,12 @@ city_input = "//input[@id='city']"
 select_state = "//select[@id='id_state']"
 zipcode = "//input[@id='postcode']"
 select_country = "//select[@id='id_country']"
+add_info_text_area = "//textarea[@id='other']"
 phone_num = "//input[@id='phone_mobile']"
 assign_address = "//input[@id='alias']"
 register_button = "//body[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/form[1]/div[4]/button[1]/span[1]"
 sign_out_button = "//header/div[2]/div[1]/div[1]/nav[1]/div[2]/a[1]"
-
+heading_xpath = "//h1[contains(text(),'My account')]"
 
 
 url = "http://automationpractice.com/index.php"
@@ -104,6 +107,19 @@ year_selection.select_by_index(36)
 # print(f" option i selected : ", month_selection.all_selected_options)
 time.sleep(2)
 
+element = driver.find_element_by_xpath(newsletter_checkbox)
+print("clicking the element")
+element.click()
+time.sleep(1)
+
+
+element = driver.find_element_by_xpath(receive_checkbox)
+print("clicking the element")
+element.click()
+time.sleep(1)
+
+
+
 element = driver.find_element_by_xpath(address_firstname)
 print(f"entering the following text : Michael ")
 element.clear()
@@ -157,6 +173,13 @@ time.sleep(1)
 # usa_selection.select_by_index(0)
 # print(f" option i selected : ", usa_selection.all_selected_options)
 #
+element = driver.find_element_by_xpath(add_info_text_area)
+print(f"entering the following text : Hello World!!! ")
+element.clear()
+element.send_keys('Hello World!!!')
+time.sleep(1)
+
+
 
 element = driver.find_element_by_xpath(phone_num)
 print(f"entering the following text : 7024097887 ")
